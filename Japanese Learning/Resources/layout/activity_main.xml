@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
-        android:text="Welcome to Japanese!"
+        android:text="@string/WelcomeToJapanese"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:minWidth="25px"
@@ -14,4 +14,10 @@
         android:contentDescription="Welcome to Japanese, this is your first step!"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
+    <Button
+        android:text="@string/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/JapaneseStart"
+        android:id="@+id/UpdateBtn" />
 </RelativeLayout>
