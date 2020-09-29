@@ -9,29 +9,27 @@ using System;
 using Java.Net;
 namespace Japanese_Learning
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    //[Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
+    public class CodeFile1 : AppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.Lesson1);
 
-            Button JapaneseButton = FindViewById<Button>(Resource.Id.JapaneseStart);
+            Button BackButton = FindViewById<Button>(Resource.Id.BackBtn);
 
-            Button UpdateButton = FindViewById<Button>(Resource.Id.UpdateBtn);
+            Button ContinueButton = FindViewById<Button>(Resource.Id.ContinueBtn);
 
-            UpdateButton.Click += (sender, e) =>
+            BackButton.Click += (sender, e) =>
             {
-                
-                Launcher.OpenAsync(new System.Uri("https://github.com/calebhk98/JapaneseLearningApp/raw/master/com.companyname.japanese_learning.apk"));
+                SetContentView(Resource.Layout.activity_main);
             };
-            JapaneseButton.Click += (sender, e) =>
+            ContinueButton.Click += (sender, e) =>
             {
-                new CodeFile1();
-                SetContentView(Resource.Layout.Lesson1);
+
                 
             };
 
